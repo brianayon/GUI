@@ -1,0 +1,116 @@
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+class menu extends JFrame implements ActionListener
+	{
+		//initializing variables
+		JFrame frame;
+		JMenuBar menubar;
+		JMenu file,about;
+		JMenuItem roster,attendance,save,plot;
+		JTextArea ta;
+		
+		//constructor 
+		menu()
+		{
+			  //creating the main frame
+				       JFrame frame = new JFrame();
+				       frame.setVisible(true);
+				       frame.setSize(400,400);      
+				       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				       frame.setLayout(null);
+				       JTextArea ta = new JTextArea();
+				       ta.setBounds(5,5,360,320);
+				       
+				       
+				       //Creating and adding a main menu to add to frame
+				       JMenuBar menubar = new JMenuBar();
+				       frame.setJMenuBar(menubar);
+				      
+				  
+				       // Adding 'File' as a menu to the menu bar
+				       JMenu file = new JMenu ("File");
+				       menubar.add(file); 
+				       
+				       //Adding Items:Load Roster,Add attendance,Save,& Plot data to file menu
+				       JMenuItem roster = new JMenuItem("Load a Roster");		       			       
+				       JMenuItem attendance = new JMenuItem("Add Attendance");
+				       JMenuItem save = new JMenuItem("Save");
+				       JMenuItem plot = new JMenuItem("Plot Data");  
+				       
+				        //separator creates a line between ITEMS
+				       file.add(roster);		      
+				       file.addSeparator();
+				       
+				       file.add(attendance);
+				       file.addSeparator();
+				       
+				       file.add(save);
+				       file.addSeparator();
+				       
+				       file.add(plot);
+				       
+				       
+				    
+				       // Adding 'About' as a menu to the menu bar
+				       JMenu about = new JMenu("About");
+				       menubar.add(about);
+				       
+				       
+				       //ActionListener
+				       roster.addActionListener(this);
+				       attendance.addActionListener(this);
+				       save.addActionListener(this);
+				       plot.addActionListener(this);
+				       about.addActionListener(this);
+				      
+				    
+		}
+				    
+			       public void actionPerformed(ActionEvent e)
+			       {
+			    	   if(e.getSource()== roster)   
+			    	   {
+			    		   
+			    	   }
+			    	   else
+			    			    
+			    	    if(e.getSource()== attendance)    
+			    		{
+			    				
+			    		}
+			    	    else
+			    	   	if(e.getSource()== save)  
+			    		{
+			    				
+			    		}
+			    	   	
+			    	   
+			    	   	else
+			    		if(e.getSource()== plot)  
+			    		{
+			    			
+			    		}
+			    		
+			    					
+			    			   
+			       }
+			       
+		//main method calls constructor 	       
+		public static void main(String[] args) 
+		{
+			new menu();
+		}
+			   
+	}
+		    
+	
+	   	       
+			  
+		    
+	    
+	
+
+
